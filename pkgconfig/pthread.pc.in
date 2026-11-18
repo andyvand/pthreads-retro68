@@ -1,0 +1,10 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@/@PTR_INCLUDE_SUBDIR@
+
+Name: @PTR_PC_NAME@
+Description: POSIX threads on the classic Mac OS Thread Manager (Retro68, @CMAKE_SYSTEM_NAME@)
+Version: @PROJECT_VERSION@
+Cflags: -I${includedir}
+Libs: -L${libdir} -l@PTR_LIB_NAME@ @PTR_PC_SYS_LIBS@
